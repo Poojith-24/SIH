@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom crisp scrollbar */
+html.dark ::-webkit-scrollbar,
+html:not(.light) ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+html.dark ::-webkit-scrollbar-track,
+html:not(.light) ::-webkit-scrollbar-track {
+  background: #081426;
+}
+html.dark ::-webkit-scrollbar-thumb,
+html:not(.light) ::-webkit-scrollbar-thumb {
+  background: #1B2E4B;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover,
+html:not(.light) ::-webkit-scrollbar-thumb:hover {
+  background: #2E4B75;
+}
+
+/* Custom crisp scrollbar for Light mode */
+html.light ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   LIGHT THEME DESIGN SYSTEM & COLOR TOKEN OVERRIDES
+   ========================================================= */
+html.light {
+  color-scheme: light;
+}
+
+/* Page canvas and core structure */
+html.light body {
+  background-color: #f4f6f9 !important;
+  color: #0f172a !important;
+}
+
+/* Card surfaces and panels */
+html.light .bg-\[\#050D1A\],
+html.light .bg-\[\#050E1B\],
+html.light .bg-\[\#050E1C\],
+html.light .bg-\[\#06101D\],
+html.light .bg-\[\#061224\],
+html.light .bg-\[\#071322\],
+html.light .bg-\[\#071324\],
+html.light .bg-\[\#081426\],
+html.light .bg-\[\#091526\],
+html.light .bg-\[\#09172B\],
+html.light .bg-\[\#0A1A2E\],
+html.light .bg-\[\#0B1728\],
+html.light .bg-\[\#0C223B\],
+html.light .bg-\[\#0C223D\],
+html.light .bg-\[\#0E1F36\],
+html.light .bg-\[\#0E243E\],
+html.light .bg-\[\#0F2238\],
+html.light .bg-\[\#0F2644\],
+html.light .bg-\[\#101424\],
+html.light .bg-\[\#10243D\],
+html.light .bg-\[\#10243E\],
+html.light .bg-\[\#102742\],
+html.light .bg-\[\#142845\],
+html.light .bg-\[\#152E4C\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Sub-panels, pill groups and inner nested containers */
+html.light .bg-\[\#040C17\],
+html.light .bg-\[\#040C17\]\/90,
+html.light .bg-\[\#08182B\],
+html.light .bg-\[\#0A182B\],
+html.light .bg-\[\#0A1B30\],
+html.light .bg-\[\#0A192F\] {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-\[\#030812\] {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-\[\#050D1A\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-\[\#0E1E33\] {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-\[\#142C4C\] {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+html.light .bg-\[\#132A4A\] {
+  background-color: #e0f2fe !important;
+}
+
+html.light .bg-\[\#103055\] {
+  background-color: #dbeafe !important;
+}
+
+/* Borders */
+html.light .border-\[\#14263F\],
+html.light .border-\[\#0F1D33\],
+html.light .border-\[\#0F1E33\],
+html.light .border-\[\#0F223D\],
+html.light .border-\[\#10223B\],
+html.light .border-\[\#10233B\],
+html.light .border-\[\#12233B\],
+html.light .border-\[\#122847\],
+html.light .border-\[\#132642\],
+html.light .border-\[\#132845\],
+html.light .border-\[\#132A4A\],
+html.light .border-\[\#132C4A\],
+html.light .border-\[\#142845\],
+html.light .border-\[\#142947\],
+html.light .border-\[\#142A4A\],
+html.light .border-\[\#142B47\],
+html.light .border-\[\#153257\],
+html.light .border-\[\#16365C\],
+html.light .border-\[\#173357\],
+html.light .border-\[\#17365D\],
+html.light .border-\[\#183252\],
+html.light .border-\[\#1A365D\],
+html.light .border-\[\#1A385C\],
+html.light .border-\[\#1A385E\],
+html.light .border-\[\#1A3A63\],
+html.light .border-\[\#1B365B\],
+html.light .border-\[\#1B3A64\],
+html.light .border-\[\#1C3A63\],
+html.light .border-\[\#1C3E6B\],
+html.light .border-\[\#1D3E68\],
+html.light .border-\[\#1D3E6B\],
+html.light .border-\[\#1D4A7A\],
+html.light .border-\[\#1E4370\],
+html.light .border-\[\#1E4378\],
+html.light .border-\[\#1E4577\],
+html.light .border-\[\#1E4878\],
+html.light .border-\[\#1E4D82\],
+html.light .border-\[\#1F4574\],
+html.light .border-\[\#204F82\],
+html.light .border-\[\#20528A\],
+html.light .border-\[\#214D80\],
+html.light .border-\[\#23538A\],
+html.light .border-\[\#265E99\],
+html.light .border-\[\#2764A3\],
+html.light .border-\[\#1B2E4B\] {
+  border-color: #e2e8f0 !important;
+}
+
+/* Headings and primary titles */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #0f172a !important;
+}
+
+/* Text in spans, divs, and paragraphs that was hardcoded text-white */
+html.light span.text-white:not([class*="bg-"]):not([class*="from-"]):not([class*="to-"]),
+html.light div.text-white:not([class*="bg-"]):not([class*="from-"]):not([class*="to-"]),
+html.light p.text-white:not([class*="bg-"]):not([class*="from-"]):not([class*="to-"]) {
+  color: #0f172a !important;
+}
+
+/* Preserve bright white text on solid color buttons and badges */
+html.light .bg-rose-500,
+html.light .bg-rose-600,
+html.light .bg-emerald-500,
+html.light .bg-emerald-600,
+html.light .bg-blue-600,
+html.light .bg-sky-600,
+html.light button[class*="bg-gradient-to-r"] {
+  color: #ffffff !important;
+}
+html.light .bg-rose-500 *,
+html.light .bg-emerald-500 *,
+html.light .bg-blue-600 *,
+html.light button[class*="bg-gradient-to-r"] * {
+  color: #ffffff !important;
+}
+
+/* Secondary and descriptive text */
+html.light .text-slate-300,
+html.light .text-slate-200 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Accents and Cyan Brand Colors */
+html.light .text-\[\#39D5FF\] {
+  color: #0284c7 !important;
+}
+
+html.light .text-cyan-400,
+html.light .text-cyan-300 {
+  color: #0369a1 !important;
+}
+
+/* Forms, Search Bar and Inputs */
+html.light input[type="text"],
+html.light input[type="search"],
+html.light input[type="number"],
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Dedicated Search Bar & Hero Area Light Overrides */
+html.light #station-overview-hero-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 60%, #f0f9ff 100%) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light #input-place-district-search {
+  background-color: #ffffff !important;
+  border: 2px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #input-place-district-search:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18) !important;
+}
+
+/* Status Badges: Emerald / Normal */
+html.light .bg-emerald-950\/80,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-950\/40,
+html.light .bg-emerald-950\/30 {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+html.light .text-emerald-300,
+html.light .text-emerald-400 {
+  color: #059669 !important;
+}
+
+/* Status Badges: Amber / Warning */
+html.light .bg-amber-950\/80,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-950\/40,
+html.light .bg-amber-950\/30 {
+  background-color: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #fde68a !important;
+}
+html.light .text-amber-300,
+html.light .text-amber-400 {
+  color: #d97706 !important;
+}
+
+/* Status Badges: Rose / Critical / Error */
+html.light .bg-rose-950\/80,
+html.light .bg-rose-950\/60,
+html.light .bg-rose-950\/40,
+html.light .bg-rose-950\/30 {
+  background-color: #fff1f2 !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}
+html.light .text-rose-300,
+html.light .text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* Status Badges: Cyan / Blue / Info */
+html.light .bg-cyan-950\/80,
+html.light .bg-cyan-950\/60,
+html.light .bg-cyan-950\/40 {
+  background-color: #f0f9ff !important;
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
+}
+
+/* Status Badges: Purple */
+html.light .bg-purple-950\/70,
+html.light .bg-purple-950\/60 {
+  background-color: #faf5ff !important;
+  color: #6b21a8 !important;
+  border-color: #e9d5ff !important;
+}
+html.light .text-purple-300 {
+  color: #7e22ce !important;
+}
+
+/* Buttons with Gradient Accents in Light Mode */
+html.light .bg-gradient-to-r.from-\[\#0C3866\].to-\[\#0A2D53\] {
+  background-image: linear-gradient(to right, #0284c7, #0369a1) !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+}
+html.light .bg-gradient-to-r.from-\[\#0C3866\].to-\[\#0A2D53\]:hover {
+  background-image: linear-gradient(to right, #0369a1, #075985) !important;
+}
+
+html.light .bg-gradient-to-r.from-\[\#173F69\].to-\[\#122E4D\] {
+  background-image: linear-gradient(to right, #e0f2fe, #bae6fd) !important;
+  color: #0369a1 !important;
+  border-color: #7dd3fc !important;
+}
+html.light .bg-gradient-to-r.from-\[\#173F69\].to-\[\#122E4D\]:hover {
+  background-image: linear-gradient(to right, #bae6fd, #7dd3fc) !important;
+}
+
+/* Navigation tabs in Light mode */
+html.light nav button:not(.bg-\[\#142C4C\]) {
+  color: #475569 !important;
+}
+html.light nav button:not(.bg-\[\#142C4C\]):hover {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+}
+
+/* Modal Backdrop */
+html.light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(4px);
+}
+

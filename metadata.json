@@ -1,0 +1,6 @@
+{
+  "name": "WeatherGuard AI",
+  "description": "AI/ML-Based Intelligent Anomaly Detection, Sensor Health & Predictive Maintenance Platform for Automatic Weather Stations (AWS).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
